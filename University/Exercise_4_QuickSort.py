@@ -26,17 +26,17 @@ def _pivot(arr, low, high):
 
 def _partition(arr, low, high):
     mid = (low + high) // 2
-    pilot = arr[mid]
+    pivot = arr[mid]
     _swap(arr, mid, high - 1)
     i = low
     j = high - 1
     while True:
         while True:
             i += 1
-            if arr[i] >= pilot: break
+            if arr[i] >= pivot: break
         while True:
             j -= 1
-            if arr[j] <= pilot: break
+            if arr[j] <= pivot: break
         if i >= j: break
         _swap(arr, i, j)
     _swap(arr, i, high - 1)
