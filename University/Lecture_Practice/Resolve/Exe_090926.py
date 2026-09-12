@@ -38,7 +38,9 @@ def is_in(str_1, str_2):
 list_comprehension  = []
 for i in range(2,101):
     for j in range(2, i):
-        if i % j == 0:
+        if i % j == 0: # non prime number
             list_comprehension.append(i)
             break
 print(list_comprehension)
+# list comprehension
+print([i for i in range(2,101) if len([j for j in range(2, i//2 + 1) if i % j == 0]) > 0])
